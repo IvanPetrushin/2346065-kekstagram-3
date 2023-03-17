@@ -1,4 +1,4 @@
-import { randomValue } from './util.js';
+import { getRandomInt } from './util.js';
 
 function getPhotosData() {
   const photos = [];
@@ -7,8 +7,8 @@ function getPhotosData() {
       id: i + 1,
       url: `photos/${i + 1}.jpg`,
       description: `Фотокарточка c id = ${i + 1}`,
-      likes: randomValue(15, 200),
-      comments: randomValue(0, 200)
+      likes: getRandomInt(15, 200),
+      comments: getRandomInt(0, 200)
     };
     photos.push(photoData);
   }
